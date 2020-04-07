@@ -12,7 +12,7 @@ Name | Github ID | Student ID
 
 
 ###  Description of dataset
-**malicious_urls.csv** and **benign_urls.csv** are malicious and benign data sets, which containing 5000 data respectively.
+'malicious_urls.csv' and 'benign_urls.csv' are malicious and benign data sets, which containing 5000 data respectively.
 top1m_rank.csv contains top 1 million URLs which often used in daily life.
 
 
