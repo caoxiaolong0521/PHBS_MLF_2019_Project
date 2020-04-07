@@ -13,9 +13,9 @@ Name | Github ID | Student ID
 
 ###  Description of dataset
 `malicious_urls.csv` and `benign_urls.csv` are malicious and benign data sets, which containing 5000 data respectively.
-top1m_rank.csv contains top 1 million URLs which often used in daily life.
+`top1m_rank.csv` contains the top 1 million URLs which are often used in people's daily life.
 
 
 ###  The goal of our project
-In order to detect the security of a URL, we try to construct some reasonable features from the malicious_urls.csv and benign_urls.csv data sets, and use this to train our machine learning detection model.
+In order to **detect the security of a URL** (i.e. whether the website is dangerous to visit), we try to construct some reasonable features from the `malicious_urls.csv` and `benign_urls.csv` data sets, and use this to train our machine learning detection model.
 
