@@ -12,8 +12,8 @@ Name | Github ID | Student ID
 
 
 ###  Description of dataset
-*`malicious_urls.csv` and `benign_urls.csv` are malicious and benign data sets, which containing 5000 data respectively.
-*`top1m_rank.csv` contains the top 1 million URLs which are often used in people's daily life.
+* `malicious_urls.csv` and `benign_urls.csv` are malicious and benign data sets, which containing 5000 data respectively.
+* `top1m_rank.csv` contains the top 1 million URLs which are often used in people's daily life.
 
 
 ###  The goal of our project
