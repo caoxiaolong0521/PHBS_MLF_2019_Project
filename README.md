@@ -14,27 +14,27 @@ Name | Github ID | Student ID
 * `data_ulrs.csv` is the training data set after we construct and extract features from the raw datasets
 <br>
 
-#### malicious urls examples：
+* malicious urls examples：
 <br> http://www.businesspage.ecuaradionline.com/9feaf7f8354ad68ba40e29d70cd05405
 <br> http://businesspage.ecuaradionline.com
 <br> http://www.lotto109.com/follow-up/eb6e30faeebb16feaf07ae96e6e2e821
 
-#### benign urls examples：
+* benign urls examples：
 <br>api-global.netflix.com
 <br>www.google.com
 <br>microsoft.com
 
-#### top1 million urls examples：
+* top1 million urls examples：
 <br> apple.com
 <br> live.com
 <br> www.googleapis.com
 
-#### training dataset examples:
+* training dataset examples:
 <br> http://www.businesspage.ecuaradionline.com/9feaf7f8354ad68ba40e29d70cd05405/|4.603980434631428|5|0|69|0|0|19|0|1|1
 <br> http://businesspage.ecuaradionline.com/|3.9056390622295662|3|0|32|0|0|0|0|1|1
 <br> http://www.lotto109.com/follow-up/eb6e30faeebb16feaf07ae96e6e2e821/|4.229085753935212|6|0|60|0|0|17|0|1|1
 
-#### Data source:
+* Data source:
 <br> https://openphish.com/feed.txt
 <br> https://ransomwaretracker.abuse.ch/blocklist/
 <br> https://www.phishtank.com/
