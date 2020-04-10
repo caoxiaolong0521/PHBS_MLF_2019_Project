@@ -19,13 +19,13 @@ Name | Github ID | Student ID
 <br> http://www.lotto109.com/follow-up/eb6e30faeebb16feaf07ae96e6e2e821
 
 * benign urls examples：
-<br>api-global.netflix.com
+<br>www.api-global.netflix.com
 <br>www.google.com
-<br>microsoft.com
+<br>www.microsoft.com
 
 * top1 million urls examples：
-<br> apple.com
-<br> live.com
+<br> www.apple.com
+<br> www.live.com
 <br> www.googleapis.com
 
 * training dataset examples:
