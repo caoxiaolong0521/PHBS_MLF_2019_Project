@@ -12,7 +12,6 @@ Name | Github ID | Student ID
 * `malicious_urls.csv` and `benign_urls.csv` are malicious and benign data sets, which containing 5000 data respectively.
 * `top1m_rank.csv` contains the top 1 million URLs which are often used in people's daily life.
 * `data_ulrs.csv` is the training data set after we construct and extract features from the raw datasets
-<br>
 
 * malicious urls examples：
 <br> http://www.businesspage.ecuaradionline.com/9feaf7f8354ad68ba40e29d70cd05405
