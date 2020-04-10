@@ -1,5 +1,5 @@
 # Group Project for MLF_2019
-
+## Detection of URL of Malicious Website
 ### Group members
 Name | Github ID | Student ID 
 :-: | :-------------------------------: | :-:
@@ -14,8 +14,9 @@ Name | Github ID | Student ID
 * `data_ulrs.csv` is the training data set after we construct and extract features from the raw datasets
 <br>
 * malicious urls examples：
-<br>`http://www.businesspage.ecuaradionline.com/9feaf7f8354ad68ba40e29d70cd05405/`                             <br>`http://businesspage.ecuaradionline.com/`
-<br>`http://www.lotto109.com/follow-up/eb6e30faeebb16feaf07ae96e6e2e821/`
+<br> http://www.businesspage.ecuaradionline.com/9feaf7f8354ad68ba40e29d70cd05405
+<br> http://businesspage.ecuaradionline.com
+<br> http://www.lotto109.com/follow-up/eb6e30faeebb16feaf07ae96e6e2e821
 
 * benign urls examples：
 <br>api-global.netflix.com
