@@ -1,5 +1,4 @@
-# Group Project for MLF_2019
-## Detection of URL of Malicious Website
+# Detection of URL of Malicious Website
 ### Group members
 Name | Github ID | Student ID 
 :-: | :-------------------------------: | :-:
