@@ -1,4 +1,4 @@
-# Detection of URL of Malicious Website
+# Detection of the Malicious Website's URL
 ## Group members
 Name | Github ID | Student ID 
 :-: | :-------------------------------: | :-:
