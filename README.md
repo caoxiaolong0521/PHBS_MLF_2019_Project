@@ -113,5 +113,5 @@ Due to the suitable feature selection,our URL prediction model has obtained rela
 
 
 ## appendix
-In the process of the project, we actually found another very powerful feature, named Safebrowsing,which makes our final results even much better.
-<br>The Google Safebrowse API will check if Google classes the URLs as safe. Any URLs classed as not safe may be malicious. Although blacklists and resources such as Google safebrowsing cannot predict malicious URLs, the appearance of a URL in these lists is indeed a very powerful feature. However, because of some network failures, we finally found that we could not call this API of Google Cloud Platform when running again.
+In the process of the project, we actually found another very powerful feature, named Safebrowsing, which has greatly improved the performance of our results.
+<br>The Google Safebrowse API will check if Google classes the URLs as safe. Any URLs classed as not safe may be malicious. Although blacklists and resources such as Google safebrowsing cannot predict malicious URLs, the appearance of a URL in these lists is indeed a very powerful feature. However, because of some network failures, we finally found that we could not call this API of Google Cloud Platform when running again.what is really a pity!
