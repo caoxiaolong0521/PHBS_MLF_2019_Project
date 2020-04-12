@@ -94,11 +94,11 @@ After we get the training data,we defined several functions in the part2.ipynb:
 <br>
 <br> get_learning_curve()、plot_confusion_matrix() and plot_ROC_CURVE() are all evaluation indicators of the model
 <br>
+<br> The following sections can be used to determine whether a newly entered URL is malicious or not:
 <br> get_url_info(): Get URL information function extracts features from a user supplied URL. The function extracts all features similarly to extract_features() and saves the extracted features in the form of a dictionary. 
 <br> check_valid_url(): Check valid URL function checks whether or not the input URL to classify is in a valid format.
 <br> classify_url(): Classify URL function passes in the input URL and classifies it as malicious or benign.
 
+we have try some other algorithms we learned in class,like svm or lr,however,the result is not acceptable for us, we finally choose to use the RandomForest to train the classifier in the train_model() function.
 
-
-I have try some other algorithms we learned in class,like svm or lr however,the learning curve is not acceptable for us, so i choose to use the RandomForest here, which works better.
 
