@@ -1,5 +1,5 @@
 # Detection of URL of Malicious Website
-### Group members
+## Group members
 Name | Github ID | Student ID 
 :-: | :-------------------------------: | :-:
 [Lei HU](https://github.com/huleipku)     |     huleipku     |     1901212585    
@@ -7,7 +7,10 @@ Name | Github ID | Student ID
 [Yixin ZHAO](https://github.com/Zhaoyixin9705)     |     Zhaoyixin9705     |     1901212681    
 [Aiyu CAO](https://github.com/caoxiaolong0521)     |     caoxiaolong0521     |     1801212821    
 
-###  Description of dataset
+##  The goal of our project
+In order to **detect the security of a URL** (i.e. whether the website is dangerous to visit), we try to construct some reasonable features from the `malicious_urls.csv` and `benign_urls.csv` data sets, and use this to train our machine learning detection model.
+
+##  Description of raw dataset
 * `malicious_urls.csv` and `benign_urls.csv` are malicious and benign data sets, which containing 5000 data respectively.
 * `top1m_rank.csv` contains the top 1 million URLs which are often used in people's daily life.
 * `data_ulrs.csv` is the training data set after we construct and extract features from the raw datasets
@@ -37,6 +40,52 @@ Name | Github ID | Student ID
 <br> https://ransomwaretracker.abuse.ch/blocklist/
 <br> https://www.phishtank.com/
 
-###  The goal of our project
-In order to **detect the security of a URL** (i.e. whether the website is dangerous to visit), we try to construct some reasonable features from the `malicious_urls.csv` and `benign_urls.csv` data sets, and use this to train our machine learning detection model.
+## Feature Choosing （The selected features are both static and external）
+### Entropy
+* Malicious URLs often have a higher entropy.
+### bag_of_words
+* It seems like Malicious URLs often contains more words, so the number of kind of words that have appeared in the url can also be a good feature.
+### contains_IP 
+* we need to check the occurence of an IP address within a URL since the benign URL will not contain IP in most cases, .
+### url_length
+* Malicious URLs can often be very long in comparrison to benign URLs.
+### special_chars
+* Sometimes Malicious URLs contain a higher number of special characters,like ';','%','!','&',':'.
+### num_digits
+* Malicious URLs often have higher entropy and can contain lots of numbers.
+### suspicious_strings
+* A higher number of suspicious strings would indicate a possibly malicious URL.
+### popularity
+* Sites contained within top1 million urls dataset are not malicious.
+
+## Data processing
+First of all,we used parse_url() function to eliminate 'http://' or 'https://' in the front of the whole URL.Then we established a class, named URLFeature, which contains 9 function members. Eight functions is used to calculate 8 features while Final function is used to incorporate the url and 8 features into a list. Besides, we also defined another create_dataset function to calculate 8 features by URLFeatures class and incorporate them into a list. Finally,the create_dataset function write the lists, row by row, into data_urls.csv to save the data for our training model.
+<br>
+`top_website = pd.read_csv('top1m_rank.csv', delimiter='|', usecols = ['URL'], squeeze = True)`
+`create_dataset()`
+`output:`
+`malicious: 100/5000
+malicious: 200/5000
+malicious: 300/5000
+malicious: 400/5000
+malicious: 500/5000
+malicious: 600/5000
+malicious: 700/5000
+malicious: 800/5000
+malicious: 900/5000
+malicious: 1000/5000
+malicious: 1100/5000
+malicious: 1200/5000
+malicious: 1300/5000
+malicious: 1400/5000
+malicious: 1500/5000
+malicious: 1600/5000
+malicious: 1700/5000
+malicious: 1800/5000
+malicious: 1900/5000
+malicious: 2000/5000
+malicious: 2100/5000
+malicious: 2200/5000`
+
+
 
