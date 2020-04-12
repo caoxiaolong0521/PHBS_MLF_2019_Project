@@ -64,28 +64,26 @@ First of all,we used parse_url() function to eliminate 'http://' or 'https://' i
 `top_website = pd.read_csv('top1m_rank.csv', delimiter='|', usecols = ['URL'], squeeze = True)`
 <br>`create_dataset()`
 <br>`output:`
-<br>`malicious: 100/5000
-malicious: 200/5000
-malicious: 300/5000
-malicious: 400/5000
-malicious: 500/5000
-malicious: 600/5000
-malicious: 700/5000
-malicious: 800/5000
-malicious: 900/5000
-malicious: 1000/5000
-malicious: 1100/5000
-malicious: 1200/5000
-malicious: 1300/5000
-malicious: 1400/5000
-malicious: 1500/5000
-malicious: 1600/5000
-malicious: 1700/5000
-malicious: 1800/5000
-malicious: 1900/5000
-malicious: 2000/5000
-malicious: 2100/5000
-malicious: 2200/5000`
-
+<br>malicious: 100/5000
+<br>malicious: 200/5000
+<br>malicious: 300/5000
+<br>malicious: 400/5000
+<br>malicious: 500/5000
+<br>malicious: 600/5000
+<br>malicious: 700/5000
+<br>malicious: 800/5000
+<br>malicious: 900/5000
+<br>malicious: 1000/5000
+<br>malicious: 1100/5000
+<br>...
+<br>benign: 100/5000
+<br>benign: 200/5000
+<br>benign: 300/5000
+<br>benign: 400/5000
+<br>benign: 500/5000
+<br>benign: 600/5000
+<br>benign: 700/5000
+<br>benign: 800/5000
+<br>benign: 900/5000
 
 
