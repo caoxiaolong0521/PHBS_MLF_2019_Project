@@ -167,5 +167,6 @@ def create_dataset():
             print('benign: {0:d}/5000'.format(i+1))
     feature_file.close()
 #%% Main
-top_website = pd.read_csv('top1m_rank.csv', delimiter='|', usecols = ['URL'], squeeze = True)
-create_dataset()
+if __name__=='__main__':
+    top_website = pd.read_csv('top1m_rank.csv', delimiter='|', usecols = ['URL'], squeeze = True)
+    create_dataset()
