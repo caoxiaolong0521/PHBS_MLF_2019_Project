@@ -132,7 +132,7 @@ def extract_features(url):
     return features
 #%% Create_dataset
 def create_dataset():
-    output_file = "data_urls_trial.csv"
+    output_file = "data_urls.csv"
     csv_delimeter = '|'
     csv_columns = ["URL","Entropy","BagOfWords","ContainsIP","LengthURL",
                    "SpecialChars","SuspiciousStrings","NumberOfDigits",
