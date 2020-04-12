@@ -60,6 +60,7 @@ In order to **detect the security of a URL** (i.e. whether the website is danger
 
 ## Data processing
 First of all,we used parse_url() function to eliminate 'http://' or 'https://' in the front of the whole URL.Then we established a class, named URLFeature, which contains 9 function members. Eight functions is used to calculate 8 features while Final function is used to incorporate the url and 8 features into a list. Besides, we also defined another create_dataset function to calculate 8 features by URLFeatures class and incorporate them into a list. Finally,the create_dataset function write the lists, row by row, into data_urls.csv to save the data for our training model.
+<br>It will take approximately between 2-3 hours due to feature extraction.
 <br>
 `top_website = pd.read_csv('top1m_rank.csv', delimiter='|', usecols = ['URL'], squeeze = True)`
 <br>`create_dataset()`
@@ -85,5 +86,19 @@ First of all,we used parse_url() function to eliminate 'http://' or 'https://' i
 <br>benign: 700/5000
 <br>benign: 800/5000
 <br>benign: 900/5000
+<br>...
 
+## Model training
+After we get the training data,we defined several functions in the part2.ipynb:
+<br> train_model():This function trains a classifier on the URL dataset. 
+<br>
+<br> get_learning_curve()、plot_confusion_matrix() and plot_ROC_CURVE() are all evaluation indicators of the model
+<br>
+<br> get_url_info(): Get URL information function extracts features from a user supplied URL. The function extracts all features similarly to extract_features() and saves the extracted features in the form of a dictionary. 
+<br> check_valid_url(): Check valid URL function checks whether or not the input URL to classify is in a valid format.
+<br> classify_url(): Classify URL function passes in the input URL and classifies it as malicious or benign.
+
+
+
+I have try some other algorithms we learned in class,like svm or lr however,the learning curve is not acceptable for us, so i choose to use the RandomForest here, which works better.
 
