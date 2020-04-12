@@ -58,7 +58,7 @@ In order to **detect the security of a URL** (i.e. whether the website is danger
 ### popularity
 * Sites contained within top1 million urls dataset are not malicious.
 <br>
-![Image text](https://raw.githubusercontent.com/caoxiaolong0521/PHBS_MLF_2019_Project/master/images/Structure.jpg)
+![image](https://raw.githubusercontent.com/caoxiaolong0521/PHBS_MLF_2019_Project/master/images/Structure.jpg)
 
 ## Data processing
 First of all,we used parse_url() function to eliminate 'http://' or 'https://' in the front of the whole URL.Then we established a class, named URLFeature, which contains 9 function members. Eight functions is used to calculate 8 features while Final function is used to incorporate the url and 8 features into a list. Besides, we also defined another create_dataset function to calculate 8 features by URLFeatures class and incorporate them into a list. Finally,the create_dataset function write the lists, row by row, into data_urls.csv to save the data for our training model.
