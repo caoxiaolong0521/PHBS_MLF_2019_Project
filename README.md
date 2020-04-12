@@ -112,3 +112,6 @@ Due to the suitable feature selection,our URL prediction model has obtained rela
 ![image](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/images/confusion_matrix.jpg)
 
 
+## appendix
+In the course of the project, we found another very powerful feature, named Safebrowsing,which makes our final results even much better.
+the Google Safebrowse API will check if Google classes the URLs as safe. Any URLs classed as not safe may be malicious. Although blacklists and resources such as Google safebrowsing cannot predict malicious URLs, the appearance of a URL in these lists is indeed a very powerful feature. However, because of some network failures, we finally found that we could not call this API of Google Cloud Platform when running again.
