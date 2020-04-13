@@ -43,7 +43,7 @@ In order to **detect the security of a URL** (i.e. whether the website is danger
 ## Feature Choosing （The selected features are both static and external）
 Feature | Explanations about the feature 
 :-: | :-:
-Entropy | Entropy was originally a concept proposed in the field of physics, which is used to **measure the degree of chaos in a system**. Then, Shannon borrowed this concept and proposed the information entropy. And many researches have shown that **malicious URLs often have a higher information entropy**.
+Entropy | Entropy was originally a concept proposed in the field of physics, which is used to *measure the degree of chaos in a system*. Then, Shannon borrowed this concept and proposed the information entropy. And many researches have shown that **malicious URLs often have a higher information entropy**.
 ### bag_of_words
 * It seems like Malicious URLs often contains more words, so the number of kind of words that have appeared in the url can also be a good feature.
 ### contains_IP 
@@ -108,14 +108,8 @@ we have try some other algorithms we learned in class,like svm or lr,however,the
 
 ## Model evaluation 
 Due to the suitable feature selection,our URL prediction model has obtained relatively good indicators with Cross Validation Score:  92.6 % and F1 Score:  92.72 %
-<br>`Principal component analysis can help us to understand how much variance each feature can explained in our model`
-<br>
-![image](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/images/explained_variance.png)
-<br>`Learning_curve`
-![image](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/images/learning_curve.jpg)
-<br>
+
 ![image](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/images/ROC.jpg)
-<br>
 ![image](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/images/confusion_matrix.jpg)
 
 
