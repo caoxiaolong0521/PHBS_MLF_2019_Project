@@ -65,12 +65,17 @@ Feature name | Explanations about the feature
 * The source code is in [Part-1 Create_dataset_for_training_model.ipynb](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/Part-1%20Create_dataset_for_training_model.ipynb).
 
 ## Model Training
-After we get the training data,we defined several functions in the part2.ipynb:
-<br>
-<br> train_model():This function trains a classifier on the URL dataset. 
-<br>
-<br> get_learning_curve()、plot_confusion_matrix() and plot_ROC_CURVE() are all evaluation indicators of the model
-<br>
+* After we obtain the training data (`data_urls.csv`), we need to train the model next.
+* The model we chose is the **random forest**. And we define the function `train_model` to train the classifier on the dataset we obtained before.
+* The source code of training the model is in [Part-2 Train_model.ipynb](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/Part-2%20Train_model.ipynb).
+
+## Model Evaluation
+* In order to evaluate the performance of the model, we define three functions `plot_ROC_CURVE`, `plot_confusion_matrix`, `get_learning_curve` to plot the ROC curve, confusion matrix and learning curve.
+* The source code is in [Part-2 Train_model.ipynb](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/Part-2%20Train_model.ipynb). And the figures of the results are shown below.
+![image](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/images/ROC.jpg)
+![image](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/images/confusion_matrix.jpg)
+![image](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/images/learning_curve.jpg)
+
 <br> `The following sections can be used to determine whether a newly entered URL is malicious or not:`
 <br> get_url_info(): Get URL information function extracts features from a user supplied URL. The function extracts all features similarly to extract_features() and saves the extracted features in the form of a dictionary. 
 <br> check_valid_url(): Check valid URL function checks whether or not the input URL to classify is in a valid format.
@@ -81,8 +86,7 @@ we have try some other algorithms we learned in class,like svm or lr,however,the
 ## Model evaluation 
 Due to the suitable feature selection,our URL prediction model has obtained relatively good indicators with Cross Validation Score:  92.6 % and F1 Score:  92.72 %
 
-![image](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/images/ROC.jpg)
-![image](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/images/confusion_matrix.jpg)
+
 
 
 ## appendix
