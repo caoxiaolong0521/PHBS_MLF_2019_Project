@@ -41,8 +41,8 @@ In order to **detect the security of a URL** (i.e. whether the website is danger
 <br> https://www.phishtank.com/
 
 ## Preprocessing
-* In this part, the preprocessing means that we want to remove the prefix like `http://` or `https://` from the URLs. The reason is that the prefix is not helpful to judge the website, or even affect the calculation of the features.
-
+* In this part, the preprocessing means that we want to **remove the prefix** like `http://` or `https://` from the URLs. The reason is that the prefix is not helpful to judge the website, or even affect the calculation of the features.
+* In the code, we define a function `parse_url` to remove the prefix. The source code is in [Part-1 Create_dataset_for_training_model.ipynb](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/Part-1%20Create_dataset_for_training_model.ipynb).
 ## Feature Selection
 Feature name | Explanations about the feature 
 :-: | -
