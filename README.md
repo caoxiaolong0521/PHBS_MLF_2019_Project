@@ -1,5 +1,5 @@
 # Detection of the Malicious Website's URL
-## Group members
+## Group Members
 Name | Github ID | Student ID 
 :-: | :-------------------------------: | :-:
 [Lei HU](https://github.com/huleipku)     |     huleipku     |     1901212585    
@@ -7,10 +7,10 @@ Name | Github ID | Student ID
 [Yixin ZHAO](https://github.com/Zhaoyixin9705)     |     Zhaoyixin9705     |     1901212681    
 [Aiyu CAO](https://github.com/caoxiaolong0521)     |     caoxiaolong0521     |     1801212821    
 
-##  The goal of our project
+##  The Goal of Our Project
 In order to **detect the security of a URL** (i.e. whether the website is dangerous to visit), we try to construct some reasonable features from the `malicious_urls.csv` and `benign_urls.csv` data sets, and use this to train our machine learning detection model.
 
-##  Description of raw dataset
+##  Description of Raw Dataset
 * `malicious_urls.csv` and `benign_urls.csv` are malicious and benign data sets, which containing 5000 data respectively.
 * `top1m_rank.csv` contains the top 1 million URLs which are often used in people's daily life.
 * `data_ulrs.csv` is the training data set after we construct and extract features from the raw datasets
@@ -57,45 +57,14 @@ Feature name | Explanations about the feature
 `popularity` | If a website is more popular, it means more people are willing to visit, which reflects the low chance or possibility to be malicious. So the websites contained within the top 1 million URLs dataset are not likely to be malicious.
 
 ## Feature Calculation
-* After selecting the feature to use, we established a class called `URLFeature` to calculate the value of the features. 
-* The picture below shows the structure of the class. The class `URLFeature` contains 9 function members (8 functions for calculating, 1 final function for incorporating the URL and its corresponding features into a list). 
+* After selecting the feature to use, we established a class called `URLFeatures` to calculate the value of the features. 
+* The picture below shows the structure of the class. The class `URLFeatures` contains 9 function members (8 functions for calculating, 1 final function for incorporating the URL and its corresponding features into a list). 
 ![image](https://raw.githubusercontent.com/caoxiaolong0521/PHBS_MLF_2019_Project/master/images/Structure.jpg)
-* Based on `parse_url` and `URLFeature`, we defined the function `extract_features` to combine the preprocessing part and the calculation of features into one step.
+* Based on `parse_url` and `URLFeatures`, we defined the function `extract_features` to combine the preprocessing part and the calculation of features into one step.
+* At last, we define the function `create_dataset` to calculate the 8 features of our selected data and save them into `data_urls.csv` (*it will take approximately 2-3 hours*).
 * The source code is in [Part-1 Create_dataset_for_training_model.ipynb](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/Part-1%20Create_dataset_for_training_model.ipynb).
 
-## Data processing
-First of all,we used parse_url() function to eliminate 'http://' or 'https://' in the front of the whole URL.Then we established a class, named URLFeature, which 
-
-
-<br> `It will take approximately between 2-3 hours due to feature extraction.`
-<br>
-`top_website = pd.read_csv('top1m_rank.csv', delimiter='|', usecols = ['URL'], squeeze = True)`
-<br>`create_dataset()`
-<br>`output:`
-<br>malicious: 100/5000
-<br>malicious: 200/5000
-<br>malicious: 300/5000
-<br>malicious: 400/5000
-<br>malicious: 500/5000
-<br>malicious: 600/5000
-<br>malicious: 700/5000
-<br>malicious: 800/5000
-<br>malicious: 900/5000
-<br>malicious: 1000/5000
-<br>malicious: 1100/5000
-<br>...
-<br>benign: 100/5000
-<br>benign: 200/5000
-<br>benign: 300/5000
-<br>benign: 400/5000
-<br>benign: 500/5000
-<br>benign: 600/5000
-<br>benign: 700/5000
-<br>benign: 800/5000
-<br>benign: 900/5000
-<br>...
-
-## Model training
+## Model Training
 After we get the training data,we defined several functions in the part2.ipynb:
 <br>
 <br> train_model():This function trains a classifier on the URL dataset. 
