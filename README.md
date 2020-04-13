@@ -74,6 +74,7 @@ Feature name | Explanations about the feature
 ![image](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/images/ROC.jpg)
 ![image](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/images/confusion_matrix.jpg)
 ![image](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/images/learning_curve.jpg)
+![image](/images/learning_curve.jpg)
 * As for some other indicators, **the cross validation score** is *85.35%* and **F1-score** is *86.58%*, the results are shown in [Part-2 Train_model.ipynb](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/Part-2%20Train_model.ipynb).
 
 ## Future Prediction
