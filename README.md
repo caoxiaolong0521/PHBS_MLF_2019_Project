@@ -66,29 +66,17 @@ Feature name | Explanations about the feature
 
 ## Model Training
 * After we obtain the training data (`data_urls.csv`), we need to train the model next.
-* The model we chose is the **random forest**. And we define the function `train_model` to train the classifier on the dataset we obtained before.
+* The model we chose is the **random forest** (we also tried other models like SVM and logistic regression, but the result is not so good). And we define the function `train_model` to train the classifier on the dataset we obtained before.
 * The source code of training the model is in [Part-2 Train_model.ipynb](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/Part-2%20Train_model.ipynb).
 
 ## Model Evaluation
-* In order to evaluate the performance of the model, we define three functions `plot_ROC_CURVE`, `plot_confusion_matrix`, `get_learning_curve` to plot the ROC curve, confusion matrix and learning curve.
-* The source code is in [Part-2 Train_model.ipynb](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/Part-2%20Train_model.ipynb). And the figures of the results are shown below.
+* In order to evaluate the performance of the model, we define three functions `plot_ROC_CURVE`, `plot_confusion_matrix`, `get_learning_curve` to plot the ROC curve, confusion matrix and learning curve. The source code is in [Part-2 Train_model.ipynb](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/Part-2%20Train_model.ipynb). And the figures of the results are shown below.
 ![image](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/images/ROC.jpg)
 ![image](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/images/confusion_matrix.jpg)
 ![image](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/images/learning_curve.jpg)
+* As for some other indicators, **the cross validation score** is *85.35%* and **F1-score** is *86.58%*, the results are shown in [Part-2 Train_model.ipynb](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/Part-2%20Train_model.ipynb).
 
-<br> `The following sections can be used to determine whether a newly entered URL is malicious or not:`
-<br> get_url_info(): Get URL information function extracts features from a user supplied URL. The function extracts all features similarly to extract_features() and saves the extracted features in the form of a dictionary. 
-<br> check_valid_url(): Check valid URL function checks whether or not the input URL to classify is in a valid format.
-<br> classify_url(): Classify URL function passes in the input URL and classifies it as malicious or benign.
+## Future Prediction
+* After the process above, we defined the function `classify_url` based on the trained model to classify a new website's URL. But before the prediction, we need to check whether the input URL is in a valid format using the function `check_valid_url`.
+* The source code is in the last part of [Part-2 Train_model.ipynb](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/Part-2%20Train_model.ipynb).
 
-we have try some other algorithms we learned in class,like svm or lr,however,the result is not acceptable for us, we finally choose to use the RandomForest to train the classifier in the train_model() function.
-
-## Model evaluation 
-Due to the suitable feature selection,our URL prediction model has obtained relatively good indicators with Cross Validation Score:  92.6 % and F1 Score:  92.72 %
-
-
-
-
-## appendix
-In the process of the project, we actually found another very powerful feature, named Safebrowsing, which has greatly improved the performance of our results.
-<br>The Google Safebrowse API will check if Google classes the URLs as safe. Any URLs classed as not safe may be malicious. Although blacklists and resources such as Google safebrowsing cannot predict malicious URLs, the appearance of a URL in these lists is indeed a very powerful feature. However, because of some network failures, we finally found that we could not call this API of Google Cloud Platform when running again.what is really a pity!
