@@ -58,24 +58,23 @@ Feature name | Explanations about the feature
 
 * After we obtain the training data (`data_urls.csv`), we need to train the model next.
 * The model we chose is the **Random Forest** (we also tried other models like SVM and logistic regression, but the result is not so good). 
-* The source code of training the model is in [Part-2 Train_model.ipynb](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/Part-2%20Train_model.ipynb).
+* The source code of training the model is in [Part-2 Train_model.ipynb](Part-2/Part-2%20Train_model.ipynb).
 
 ### 4.2 Model Evaluation
 
 * In order to evaluate the performance of the model, we mainly used ROC curve, Confusion Matrix, explained variance components and learning curve. The figures and corresponding results are shown below.
 
-1.  **ROC curve**:  **ROC** curve is far from diagonal line and **AUC** is near from 1. Thus, our model's prediction ability is well.
+1. **ROC curve**:  **ROC** curve is far from diagonal line and **AUC** is near from 1. Thus, our model's prediction ability is well.
 <img src="images/ROC.jpg" height=500, align='middle' style='margin: 0 auto'/>
-2. **Confusion Matrix**: **PRE** & **REC** are really high, indicating our model is doing well.
+2. Confusion Matrix: PRE & REC are really high, indicating our model is doing well.
 <img src="images/confusion_matrix.jpg" height=500/>
-3. **Explained Variance of Components**: The **first 6 primary components** have relatively high variance ratio, which indicate that most of our features are useful.
+3. Explained Variance of Components: The first 6 primary components have relatively high variance ratio, which indicate that most of our features are useful.
 <img src="images/explained_variance.png" height=500, align='middle' style='margin: 0 auto'/>
-4. **Learning Curve**: From the **learning curve**, we can see that our model is not biased and variation is not very high.
+4. Learning Curve: From the learning curve, we can see that our model is not biased and variation is not very high.
  <img src="images/learning_curve.jpg" height=500, align='middle' style='margin: 0 auto'/>
 
-* As for other indicators, **the cross validation score** is *87.30%* and **F1-score** is *89.53%*, the results are shown in [Part-2 Train_model.ipynb](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/Part-2%20Train_model.ipynb).
+* As for other indicators, the cross validation score is *87.30%* and F1-score is *89.53%*, the results are shown in [Part-2 Train_model.ipynb](Part-2/Part-2%20Train_model.ipynb).
 
 ## 5. Model Application (Unfinished)
 * After the process above, we defined the function `classify_url` based on the trained model to classify a new website's URL. But before the prediction, we need to check whether the input URL is in a valid format using the function `check_valid_url`.
-* The source code is in the last part of [Part-2 Train_model.ipynb](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/Part-2%20Train_model.ipynb).
-
+* The source code is in the last part of [Part-2 Train_model.ipynb](Part-2/Part-2%20Train_model.ipynb).
