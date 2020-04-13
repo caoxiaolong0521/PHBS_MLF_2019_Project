@@ -59,6 +59,7 @@ Feature name | Explanations about the feature
 ## Feature Calculation
 * After selecting the feature to use, we established a class called `URLFeature` to calculate the value of the features. 
 * The picture below shows the structure of the class. The class `URLFeature` contains 9 function members (8 functions for calculating, 1 final function for incorporating the URL and its corresponding features into a list). 
+<img src="https://raw.githubusercontent.com/caoxiaolong0521/PHBS_MLF_2019_Project/master/images/Structure.jpg" width = "200" height = "300" alt="" align=center />
 ![image](https://raw.githubusercontent.com/caoxiaolong0521/PHBS_MLF_2019_Project/master/images/Structure.jpg)
 * The source code is in [Part-1 Create_dataset_for_training_model.ipynb](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/Part-1%20Create_dataset_for_training_model.ipynb).
 ## Data processing
