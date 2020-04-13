@@ -40,7 +40,7 @@ In order to **detect the security of a URL** (i.e. whether the website is danger
 <br> https://ransomwaretracker.abuse.ch/blocklist/
 <br> https://www.phishtank.com/
 
-## Feature Choosing （The selected features are both static and external）
+## Feature Selection
 Feature name | Explanations about the feature 
 :-: | -
 `Entropy` | Entropy was originally a concept proposed in the field of physics, which is used to *measure the degree of chaos in a system*. Then, Shannon borrowed this concept and proposed the information entropy. And many researches have shown that **malicious URLs often have a higher information entropy**. And the class `Entropy` is to calculate the information entropy.
@@ -52,7 +52,6 @@ Feature name | Explanations about the feature
 `suspicious_strings` |  A higher number of suspicious strings would more possibly indicate a malicious URL. So we introduce `suspicious_strings` to describe the feature.
 `popularity` | If a website is more popular, it means more people are willing to visit, which reflects the low chance or possibility to be malicious. So the websites contained within the top 1 million URLs dataset are not likely to be malicious.
 
-<br>
 
 ## Data processing
 First of all,we used parse_url() function to eliminate 'http://' or 'https://' in the front of the whole URL.Then we established a class, named URLFeature, which contains 9 function members. Eight functions is used to calculate 8 features while Final function is used to incorporate the url and 8 features into a list. Besides, we also defined another create_dataset function to calculate 8 features by URLFeatures class and incorporate them into a list. Finally,the create_dataset function write the lists, row by row, into data_urls.csv to save the data for our training model.
