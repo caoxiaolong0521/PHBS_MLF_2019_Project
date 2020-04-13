@@ -17,7 +17,7 @@ In order to **detect the security of a URL** (i.e. whether the website is malici
 2. Train model via Random Forest & Model Evaluation 
 3. Model Application
 
-![img](\images\Framework.png)
+![img](images\Framework.png)
 
 ## 3. Data Preprocessing & Feature Extraction
 
@@ -66,7 +66,7 @@ Feature name | Explanations about the feature
 
 
 
-<img src="images/ROC.jpg" height=500, align='middle'/>
+<img src="images/ROC.jpg" height=500, align='middle' style='margin: 0 auto'/>
 ![image](images/confusion_matrix.jpg)
 ![image](images/learning_curve.jpg)
 
