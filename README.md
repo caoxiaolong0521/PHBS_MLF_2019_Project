@@ -23,7 +23,7 @@ In order to **detect the security of a URL** (i.e. whether the website is malici
 
 ## 3. Data Preprocessing & Feature Extraction
 
-###  3.1 [Description of Dataset](data/README.md)
+###  3.1 [Description of Dataset](data)
 
 ### 3.2 Preprocessing
 * In this part, the preprocessing means that we want to **remove the prefix** like `http://` or `https://` from the URLs. The reason is that the prefix is not helpful to judge the website, or even affect the calculation of the features.
