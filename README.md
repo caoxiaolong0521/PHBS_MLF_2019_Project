@@ -41,11 +41,10 @@ In order to **detect the security of a URL** (i.e. whether the website is danger
 <br> https://www.phishtank.com/
 
 ## Feature Choosing （The selected features are both static and external）
-Feature | Explanations about the feature 
+Feature name | Explanations about the feature 
 :-: | -
-Entropy | Entropy was originally a concept proposed in the field of physics, which is used to *measure the degree of chaos in a system*. Then, Shannon borrowed this concept and proposed the information entropy. And many researches have shown that **malicious URLs often have a higher information entropy**.
-### bag_of_words
-* It seems like Malicious URLs often contains more words, so the number of kind of words that have appeared in the url can also be a good feature.
+`Entropy` | Entropy was originally a concept proposed in the field of physics, which is used to *measure the degree of chaos in a system*. Then, Shannon borrowed this concept and proposed the information entropy. And many researches have shown that **malicious URLs often have a higher information entropy**. And the class `Entropy` is to calculate the information entropy.
+`bag_of_words` | Reseach also shows that **malicious URLs usually contains more words of different categories**, so *how many different kinds of words* that have appeared in the URL can also be an effective feature. And `bag_of_words` is to calculate this feature. 
 ### contains_IP 
 * we need to check the occurence of an IP address within a URL since the benign URL will not contain IP in most cases, .
 ### url_length
