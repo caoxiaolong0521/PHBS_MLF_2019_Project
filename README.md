@@ -1,5 +1,6 @@
-# Detection of the Malicious Website's URL
-## Group Members
+# Detection of the Malicious Websites' URL
+## 0. Group-11 Members
+
 Name | Github ID | Student ID 
 :-: | :-------------------------------: | :-:
 [Lei HU](https://github.com/huleipku)     |     huleipku     |     1901212585    
@@ -7,44 +8,26 @@ Name | Github ID | Student ID
 [Yixin ZHAO](https://github.com/Zhaoyixin9705)     |     Zhaoyixin9705     |     1901212681    
 [Aiyu CAO](https://github.com/caoxiaolong0521)     |     caoxiaolong0521     |     1801212821    
 
-##  The Goal of Our Project
-In order to **detect the security of a URL** (i.e. whether the website is dangerous to visit), we try to construct some reasonable features from the `malicious_urls.csv` and `benign_urls.csv` data sets, and use this to train our machine learning detection model.
+##  1. The Goal of our Project
+In order to **detect the security of a URL** (i.e. whether the website is malicious), we try to construct some reasonable features from the urls in`malicious_urls.csv` and `benign_urls.csv` . Then we use them to train our machine learning detection model.
 
-##  Description of Raw Dataset
-* `malicious_urls.csv` and `benign_urls.csv` are malicious and benign data sets, which containing 5000 data respectively.
-* `top1m_rank.csv` contains the top 1 million URLs which are often used in people's daily life.
-* `data_ulrs.csv` is the training data set after we construct and extract features from the raw datasets
+## 2. Framework of our Project
 
-* malicious urls examples：
-<br> http://www.businesspage.ecuaradionline.com/9feaf7f8354ad68ba40e29d70cd05405
-<br> http://businesspage.ecuaradionline.com
-<br> http://www.lotto109.com/follow-up/eb6e30faeebb16feaf07ae96e6e2e821
+1. Preprocess data & extract features
+2. Train model via Random Forest & Model Evaluation 
+3. Model Application
 
-* benign urls examples：
-<br>www.api-global.netflix.com
-<br>www.google.com
-<br>www.microsoft.com
+![img](\images\Framework.png)
 
-* top1 million urls examples：
-<br> www.apple.com
-<br> www.live.com
-<br> www.googleapis.com
+## 3. Data Preprocessing & Feature Extraction
 
-* training dataset examples:
-<br> http://www.businesspage.ecuaradionline.com/9feaf7f8354ad68ba40e29d70cd05405/|4.603980434631428|5|0|69|0|0|19|0|1|1
-<br> http://businesspage.ecuaradionline.com/|3.9056390622295662|3|0|32|0|0|0|0|1|1
-<br> http://www.lotto109.com/follow-up/eb6e30faeebb16feaf07ae96e6e2e821/|4.229085753935212|6|0|60|0|0|17|0|1|1
+###  3.1 [Description of Dataset](data/README.md)
 
-* Data source:
-<br> https://openphish.com/feed.txt
-<br> https://ransomwaretracker.abuse.ch/blocklist/
-<br> https://www.phishtank.com/
-
-## Preprocessing
+### 3.2 Preprocessing
 * In this part, the preprocessing means that we want to **remove the prefix** like `http://` or `https://` from the URLs. The reason is that the prefix is not helpful to judge the website, or even affect the calculation of the features.
-* In the code, we define a function `parse_url` to remove the prefix. If you want to see the source code, please turn to [Part-1 Create_dataset_for_training_model.ipynb](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/Part-1%20Create_dataset_for_training_model.ipynb).
+* In the code, we define a function `parse_url` to remove the prefix. If you want to see the source code, please turn to [Part-1 Create_dataset_for_training_model.ipynb](Part-1/Part-1%20Create_dataset_for_training_model.ipynb).
 
-## Feature Selection
+### 3.3 Feature Selection
 Feature name | Explanations about the feature 
 :-: | -
 `Entropy` | Entropy was originally a concept proposed in the field of physics, which is used to *measure the degree of chaos in a system*. Then, Shannon borrowed this concept and proposed the information entropy. And many researches have shown that **malicious URLs often have a higher information entropy**. And the class `Entropy` is to calculate the information entropy.
@@ -56,28 +39,40 @@ Feature name | Explanations about the feature
 `suspicious_strings` |  A higher number of suspicious strings would more possibly indicate a malicious URL. So we introduce `suspicious_strings` to describe the feature.
 `popularity` | If a website is more popular, it means more people are willing to visit, which reflects the low chance or possibility to be malicious. So the websites contained within the top 1 million URLs dataset are not likely to be malicious.
 
-## Feature Calculation
-* After selecting the feature to use, we established a class called `URLFeatures` to calculate the value of the features. 
+### 3.4 Feature Calculation
+* After selecting the features to use, we established a class called `URLFeatures` to calculate the value of the features. 
 * The picture below shows the structure of the class. The class `URLFeatures` contains 9 function members (8 functions for calculating, 1 final function for incorporating the URL and its corresponding features into a list). 
-![image](https://raw.githubusercontent.com/caoxiaolong0521/PHBS_MLF_2019_Project/master/images/Structure.jpg)
+![image](images/Structure.jpg)
 * Based on `parse_url` and `URLFeatures`, we defined the function `extract_features` to combine the preprocessing part and the calculation of features into one step.
 * At last, we define the function `create_dataset` to calculate the 8 features of our selected data and save them into `data_urls.csv` (*it will take approximately 2-3 hours*).
-* The source code is in [Part-1 Create_dataset_for_training_model.ipynb](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/Part-1%20Create_dataset_for_training_model.ipynb).
+* The source code is in [Part-1 Create_dataset_for_training_model.ipynb](Part-1/Part-1%20Create_dataset_for_training_model.ipynb).
 
-## Model Training
+### 3.5 Create Dataset ([data_urls.csv](data/data_urls.csv))
+
++ After loading 10000 urls and extracting their 8 features, we store the data in csv format to prepare for training model below
+
+## 4. Train model via Random Forest & Model Evaluation
+### 4.1 Train model
+
 * After we obtain the training data (`data_urls.csv`), we need to train the model next.
-* The model we chose is the **random forest** (we also tried other models like SVM and logistic regression, but the result is not so good). And we define the function `train_model` to train the classifier on the dataset we obtained before.
+* The model we chose is the **random forest** (we also tried other models like SVM and logistic regression, but the result is not so good). 
 * The source code of training the model is in [Part-2 Train_model.ipynb](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/Part-2%20Train_model.ipynb).
 
-## Model Evaluation
-* In order to evaluate the performance of the model, we define three functions `plot_ROC_CURVE`, `plot_confusion_matrix`, `get_learning_curve` to plot the ROC curve, confusion matrix and learning curve. The source code is in [Part-2 Train_model.ipynb](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/Part-2%20Train_model.ipynb). And the figures of the results are shown below.
-![image](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/images/ROC.jpg)
-![image](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/images/confusion_matrix.jpg)
-![image](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/images/learning_curve.jpg)
-![image](/images/learning_curve.jpg)
+### 4.2 Model Evaluation
+
+* In order to evaluate the performance of the model, we mainly used ROC curve, Confusion Matrix, explained variance components and learning curve. The figures and corresponding results are shown below.
+
+1.  **ROC curve**: 
+
+
+
+<img src="images/ROC.jpg" height=500, align='middle'/>
+![image](images/confusion_matrix.jpg)
+![image](images/learning_curve.jpg)
+
 * As for some other indicators, **the cross validation score** is *85.35%* and **F1-score** is *86.58%*, the results are shown in [Part-2 Train_model.ipynb](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/Part-2%20Train_model.ipynb).
 
-## Future Prediction
+## 5. Model Application
 * After the process above, we defined the function `classify_url` based on the trained model to classify a new website's URL. But before the prediction, we need to check whether the input URL is in a valid format using the function `check_valid_url`.
 * The source code is in the last part of [Part-2 Train_model.ipynb](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/Part-2%20Train_model.ipynb).
 
