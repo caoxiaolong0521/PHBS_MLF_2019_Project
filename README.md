@@ -40,6 +40,9 @@ In order to **detect the security of a URL** (i.e. whether the website is danger
 <br> https://ransomwaretracker.abuse.ch/blocklist/
 <br> https://www.phishtank.com/
 
+## Preprocessing
+* In this part, the preprocessing means that we want to remove the prefix like `http://` or `https://` from the URLs. The reason is that the prefix is not helpful to judge the website, or even affect the calculation of the features.
+
 ## Feature Selection
 Feature name | Explanations about the feature 
 :-: | -
