@@ -107,7 +107,8 @@ we have try some other algorithms we learned in class,like svm or lr,however,the
 
 ## Model evaluation 
 Due to the suitable feature selection,our URL prediction model has obtained relatively good indicators with Cross Validation Score:  92.6 % and F1 Score:  92.72 %
-`Principal component analysis can help us to understand how much variance each feature can explained in our model`
+<br>`Principal component analysis can help us to understand how much variance each feature can explained in our model`
+<br>
 ![image](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/images/explained_variance.png)
 ![image](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/images/learning_curve.jpg)
 ![image](https://github.com/caoxiaolong0521/PHBS_MLF_2019_Project/blob/master/images/ROC.jpg)
