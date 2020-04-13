@@ -14,10 +14,12 @@ In order to **detect the security of a URL** (i.e. whether the website is malici
 ## 2. Framework of our Project
 
 1. Preprocess data & extract features
+
 2. Train model via Random Forest & Model Evaluation 
+
 3. Model Application
 
-![image](images/Framework.png)
+   <img src="images/Framework.png" height=500 align='middle' style='margin: 0 auto'/>
 
 ## 3. Data Preprocessing & Feature Extraction
 
@@ -42,7 +44,7 @@ Feature name | Explanations about the feature
 ### 3.4 Feature Calculation
 * After selecting the features to use, we established a class called `URLFeatures` to calculate the value of the features. 
 * The picture below shows the structure of the class. The class `URLFeatures` contains 9 function members (8 functions for calculating, 1 final function for incorporating the URL and its corresponding features into a list). 
-![image](images/Structure.jpg)
+* <img src="images/Structure.jpg" height=500 align='middle' style='margin: 0 auto'/>
 * Based on `parse_url` and `URLFeatures`, we defined the function `extract_features` to combine the preprocessing part and the calculation of features into one step.
 * At last, we define the function `create_dataset` to calculate the 8 features of our selected data and save them into `data_urls.csv` (*it will take approximately 2-3 hours*).
 * The source code is in [Part-1 Create_dataset_for_training_model.ipynb](Part-1/Part-1%20Create_dataset_for_training_model.ipynb).
