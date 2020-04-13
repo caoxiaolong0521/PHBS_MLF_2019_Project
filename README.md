@@ -44,19 +44,14 @@ In order to **detect the security of a URL** (i.e. whether the website is danger
 Feature name | Explanations about the feature 
 :-: | -
 `Entropy` | Entropy was originally a concept proposed in the field of physics, which is used to *measure the degree of chaos in a system*. Then, Shannon borrowed this concept and proposed the information entropy. And many researches have shown that **malicious URLs often have a higher information entropy**. And the class `Entropy` is to calculate the information entropy.
-`bag_of_words` | Reseach also shows that **malicious URLs usually contains more words of different categories**, so *how many different kinds of words* that have appeared in the URL can also be an effective feature. And `bag_of_words` is to calculate this feature. 
-### contains_IP 
-* we need to check the occurence of an IP address within a URL since the benign URL will not contain IP in most cases, .
-### url_length
-* Malicious URLs can often be very long in comparrison to benign URLs.
-### special_chars
-* Sometimes Malicious URLs contain a higher number of special characters,like ';','%','!','&',':'.
-### num_digits
-* Malicious URLs often have higher entropy and can contain lots of numbers.
-### suspicious_strings
-* A higher number of suspicious strings would indicate a possibly malicious URL.
-### popularity
-* Sites contained within top1 million urls dataset are not malicious.
+`bag_of_words` | Research also shows that **malicious URLs usually contains more words of different categories**, so *how many different kinds of words* that have appeared in the URL can also be an effective feature. And `bag_of_words` is to calculate this feature. 
+`contains_IP` | *Whether a URL contains an IP address* is also a powerful indicator. So we need to check the occurence of an IP address within a URL since the **benign URL will not contain IP** in most cases.
+`url_length` | It is intuitive that **malicious URLs can often be very long** in comparison to benign URLs. For example, the official website of [Baidu](https://www.baidu.com/), [GitHub](https://github.com/), [Google](www.google.com) are all relatively short.
+`special_chars` | Sometimes **malicious URLs contain a larger number of special characters**, like ';','%','!','&',':', etc. So we introduce the feature `special_chars` to reflect. 
+`num_digits` | Researches also show that **malicious URLs usually contain more numbers**. So the number of digits is also a good feature.
+`suspicious_strings` |  A higher number of suspicious strings would more possibly indicate a malicious URL. So we introduce `suspicious_strings` to describe the feature.
+`popularity` | If a website is more popular, it means more people are willing to visit, which reflects the low chance or possibility to be malicious. So the websites contained within the top 1 million URLs dataset are not likely to be malicious.
+
 <br>
 
 ## Data processing
