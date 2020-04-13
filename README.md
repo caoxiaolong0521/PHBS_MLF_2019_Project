@@ -42,7 +42,7 @@ In order to **detect the security of a URL** (i.e. whether the website is danger
 
 ## Feature Choosing （The selected features are both static and external）
 Feature | Explanations about the feature 
-:-: | :-:
+:-: | -
 Entropy | Entropy was originally a concept proposed in the field of physics, which is used to *measure the degree of chaos in a system*. Then, Shannon borrowed this concept and proposed the information entropy. And many researches have shown that **malicious URLs often have a higher information entropy**.
 ### bag_of_words
 * It seems like Malicious URLs often contains more words, so the number of kind of words that have appeared in the url can also be a good feature.
