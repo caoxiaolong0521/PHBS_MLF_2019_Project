@@ -67,6 +67,7 @@ Feature name | Explanations about the feature
 
 1. **ROC curve**:  **ROC** curve is far from diagonal line and **AUC** is near from 1. Thus, our model's prediction ability is well.
 <div align=center><img src="images/ROC.jpg" height=500, align='middle' style='margin: 0 auto'/>
+</div>
 
 2. **Confusion Matrix**:  **PRE** & **REC** are really high, indicating our model is doing well.
 <img src="images/confusion_matrix.jpg" height=500/>
