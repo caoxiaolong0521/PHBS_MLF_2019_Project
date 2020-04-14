@@ -45,7 +45,8 @@ Feature name | Explanations about the feature
 ### 3.4 Feature Calculation
 * After selecting the features to use, we established a class called `URLFeatures` to calculate the value of the features. 
 * The picture below shows the structure of the class. The class `URLFeatures` contains 9 function members (8 functions for calculating, 1 final function for incorporating the URL and its corresponding features into a list). 
-<img src="images/Structure.jpg" height=500 align='middle' style='margin: 0 auto'/>
+<div align=center><img src="images/Structure.jpg" height=500 align='middle' style='margin: 0 auto'/>
+</div>
 
 * Based on `parse_url` and `URLFeatures`, we defined the function `extract_features` to combine the preprocessing part and the calculation of features into one step.
 * At last, we define the function `create_dataset` to calculate the 8 features of our selected data and save them into `data_urls.csv` (*it will take approximately 2-3 hours*).
@@ -76,11 +77,11 @@ Feature name | Explanations about the feature
 
 3. **Explained Variance of Components**:  The **first 6 primary components** have relatively high variance ratio, which indicate that most of our features are useful.
 <div align=center><img src="images/explained_variance.png" height=500, align='middle' style='margin: 0 auto'/>
-<\div>
+</div>
 
 4. **Learning Curve**:  From the **learning curve**, we can see that our model is **not biased** and **variation** is **not** very **high**.
 <div align=center> <img src="images/learning_curve.jpg" height=500, align='middle' style='margin: 0 auto'/>
-<\div>
+</div>
 
 * As for other indicators, the **cross-validation score** is *87.30%* and **F1-score** is *89.53%*, the results are shown in [Part-2 Train_model.ipynb](Part-2/Part-2%20Train_model.ipynb).
 
