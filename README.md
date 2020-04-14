@@ -20,7 +20,7 @@ In order to **detect the security of a URL** (i.e. whether the website is malici
 3. Model Application
 
 <div align=center><img src="images/Framework.png" height=500 align='middle' style='margin: 0 auto'/>
-<\div>
+</div>
 
 ## 3. Data Preprocessing & Feature Extraction
 
