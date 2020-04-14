@@ -19,7 +19,8 @@ In order to **detect the security of a URL** (i.e. whether the website is malici
 
 3. Model Application
 
-   <img src="images/Framework.png" height=500 align='middle' style='margin: 0 auto'/>
+<div align=center><img src="images/Framework.png" height=500 align='middle' style='margin: 0 auto'/>
+<\div>
 
 ## 3. Data Preprocessing & Feature Extraction
 
@@ -70,13 +71,16 @@ Feature name | Explanations about the feature
 </div>
 
 2. **Confusion Matrix**:  **PRE** & **REC** are really high, indicating our model is doing well.
-<img src="images/confusion_matrix.jpg" height=500/>
+<div align=center><img src="images/confusion_matrix.jpg" height=500/>
+</div>
 
 3. **Explained Variance of Components**:  The **first 6 primary components** have relatively high variance ratio, which indicate that most of our features are useful.
-<img src="images/explained_variance.png" height=500, align='middle' style='margin: 0 auto'/>
+<div align=center><img src="images/explained_variance.png" height=500, align='middle' style='margin: 0 auto'/>
+<\div>
 
 4. **Learning Curve**:  From the **learning curve**, we can see that our model is **not biased** and **variation** is **not** very **high**.
- <img src="images/learning_curve.jpg" height=500, align='middle' style='margin: 0 auto'/>
+<div align=center> <img src="images/learning_curve.jpg" height=500, align='middle' style='margin: 0 auto'/>
+<\div>
 
 * As for other indicators, the **cross-validation score** is *87.30%* and **F1-score** is *89.53%*, the results are shown in [Part-2 Train_model.ipynb](Part-2/Part-2%20Train_model.ipynb).
 
