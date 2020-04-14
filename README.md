@@ -54,8 +54,8 @@ Feature name | Explanations about the feature
 
 + After loading 10000 urls and extracting their 8 features, we store the data in csv format to prepare for training model below
 
-## 4. Train model via Random Forest & Model Evaluation
-### 4.1 Train model
+## 4. Train Model via Random Forest & Model Evaluation
+### 4.1 Train Model
 
 * After we obtain the training data (`data_urls.csv`), we need to train the model next.
 * The model we chose is the **Random Forest** (we also tried other models like SVM and logistic regression, but the result is not so good). 
@@ -67,10 +67,13 @@ Feature name | Explanations about the feature
 
 1. **ROC curve**:  **ROC** curve is far from diagonal line and **AUC** is near from 1. Thus, our model's prediction ability is well.
 <img src="images/ROC.jpg" height=500, align='middle' style='margin: 0 auto'/>
+
 2. **Confusion Matrix**:  **PRE** & **REC** are really high, indicating our model is doing well.
 <img src="images/confusion_matrix.jpg" height=500/>
+
 3. **Explained Variance of Components**:  The **first 6 primary components** have relatively high variance ratio, which indicate that most of our features are useful.
 <img src="images/explained_variance.png" height=500, align='middle' style='margin: 0 auto'/>
+
 4. **Learning Curve**:  From the **learning curve**, we can see that our model is **not biased** and **variation** is **not** very **high**.
  <img src="images/learning_curve.jpg" height=500, align='middle' style='margin: 0 auto'/>
 
