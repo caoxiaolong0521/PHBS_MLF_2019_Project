@@ -105,6 +105,7 @@ class URLFeatures():
     # Sites contained within this dataset are not malicious.
     def popularity(self):
         domain = self.url.split('/', 1)[0]
+        top_website = pd.read_csv('top1m_rank.csv', delimiter='|', usecols = ['URL'], squeeze = True)
         if domain in top_website.values:
             return 1
         else:
