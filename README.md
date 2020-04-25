@@ -61,7 +61,7 @@ Feature name | Explanations about the feature
 ### 4.1 Train Model
 
 * After we obtain the training data (`data_urls.csv`), we need to train the model next.
-* The model we chose is the **Random Forest** (we also tried other models like SVM and logistic regression, but the result is not so good). 
+* The model we chose is the **Random Forest** (we also tried other models like SVM and logistic regression, but the result is not so good. *The comparison among different models is shown in the appendix in the end*). 
 * The source code of training the model is in [Part-2 Train_model.ipynb](Part-2/Part-2%20Train_model.ipynb).
 
 ### 4.2 Model Evaluation
@@ -84,19 +84,21 @@ Feature name | Explanations about the feature
 <div align=center> <img src="images/learning_curve.jpg" height=500, align='middle' style='margin: 0 auto'/>
 </div>
 
-* As for other indicators, the **cross-validation score** is *87.30%* and **F1-score** is *89.53%*, the results are shown in [Part-2 Train_model.ipynb](Part-2/Part-2%20Train_model.ipynb).
+* As for other indicators, the **cross-validation score** is *87.75%* and **F1-score** is *89.38%*, the results are shown in [Part-2 Train_model.ipynb](Part-2/Part-2%20Train_model.ipynb).
 
 ## 5. Model Application (Unfinished)
 * After the process above, we defined the function `classify_url` based on the trained model to classify a new website's URL. But before the prediction, we need to check whether the input URL is in a valid format using the function `check_valid_url`.
 * The source code is in the last part of [Part-2 Train_model.ipynb](Part-2/Part-2%20Train_model.ipynb).
 
+## Appendix
+### A.1 Comparison Among Models
+&nbsp;   |  Logistic Regression |  Support Vector Machine | Random Forest
+:-: | :------: | :------: | :------: 
+*Accuracy(Train)*     |     80.96%    |     85.68%   |  **89.12%**
+*Accuracy(Test)*     |    82.05%   |     83.85%  |  **87.75%** 
+*Precision*     |     75.64%   |     78.53%   |   **88.19%**
+*Recall*    |    90.50%     |     **96.74%**  |   90.60%
+*F1-score*    |    82.41%     |   86.69%  |   **89.38%**
+*Parameters* | `{kernel='rbf',gamma='auto', random_state=0}` | `{solver='liblinear',random_state=0}` | `{'max_features': 'sqrt', 'n_estimators': 200}`
 
-## 6.Comparison Among Models<br>
-  /  |  LR |  SVM | RF
-| ------ | ------ | ------ | ------ |
-Accuray(Train)     |     1    |     1   |  1
-Accuracy(Test)     |     1     |     1   |  1 
-Precision     |     1     |     1    |   1
-Recall    |     1     |     1   |   1
-F1-score    |     1     |     1  |   1
-Parameters    |     {}     |     {}   |   {}
+* Except for the value of **recall**, all the other indices of the random forest are the largest. And the random forest model's recall value is greater than 90%, which we think is also relatively high, so we chose random forest model finally.
