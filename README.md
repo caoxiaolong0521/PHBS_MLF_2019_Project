@@ -92,11 +92,13 @@ Feature name | Explanations about the feature
 
 ## Appendix
 ### A.1 Comparison Among Models
- /   |  Logistic Regression |  Support Vector Machine | Random Forest
+ Index   |  Logistic Regression |  Support Vector Machine | Random Forest
 :-: | :------: | :------: | :------: 
-Accuray(Train)     |     80.96%    |     85.68%   | 89.12%
-Accuracy(Test)     |    82.05%   |     83.85%  |  87.75% 
-Precision     |     75.64%   |     78.53%   |   88.19%
-Recall    |    90.50%     |     96.74%  |   90.60%
-F1-score    |    82.41%     |   86.69%  |  89.38%
-Parameters|{kernel='rbf',gamma='auto', random_state=0}|{solver='liblinear',random_state=0}|{'max_features': 'sqrt', 'n_estimators': 200}
+**Accuracy(Train)**     |     80.96%    |     85.68%   | 89.12%
+**Accuracy(Test)**     |    82.05%   |     83.85%  |  87.75% 
+**Precision**     |     75.64%   |     78.53%   |   88.19%
+**Recall**    |    90.50%     |     96.74%  |   90.60%
+**F1-score**    |    82.41%     |   86.69%  |  89.38%
+**Parameters** |{kernel='rbf',gamma='auto', random_state=0}|{solver='liblinear',random_state=0}|{'max_features': 'sqrt', 'n_estimators': 200}
+
+* Except for the value of **Recall**, all the other indices values of the Random Forest model is the largest.
