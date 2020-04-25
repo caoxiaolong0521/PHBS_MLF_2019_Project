@@ -61,16 +61,6 @@ Feature name | Explanations about the feature
 ### 4.1 Train Model
 
 * After we obtain the training data (`data_urls.csv`), we need to train the model next.
-* We tried several models and the comparison is shown in the table below.
-* Comparison among models
-    |  LR |  SVM | RF
-| ------ | ------ | ------ | ------ |
-Accuray(Train)     |     1    |     1   |  1
-Accuracy(Test)     |     1     |     1   |  1 
-Precision     |     1     |     1    |   1
-Recall    |     1     |     1   |   1
-F1-score    |     1     |     1  |   1
-Parameters|{kernel='rbf',gamma='auto', random_state=0}|{solver='liblinear',random_state=0}|{'max_features': 'sqrt', 'n_estimators': 200}
 * The model we chose is the **Random Forest** (we also tried other models like SVM and logistic regression, but the result is not so good). 
 * The source code of training the model is in [Part-2 Train_model.ipynb](Part-2/Part-2%20Train_model.ipynb).
 
@@ -99,3 +89,14 @@ Parameters|{kernel='rbf',gamma='auto', random_state=0}|{solver='liblinear',rando
 ## 5. Model Application (Unfinished)
 * After the process above, we defined the function `classify_url` based on the trained model to classify a new website's URL. But before the prediction, we need to check whether the input URL is in a valid format using the function `check_valid_url`.
 * The source code is in the last part of [Part-2 Train_model.ipynb](Part-2/Part-2%20Train_model.ipynb).
+
+
+## 6.Comparison Among Models<br>
+  /  |  LR |  SVM | RF
+| ------ | ------ | ------ | ------ |
+Accuray(Train)     |     80.96%    |     85.68%   | 89.12%
+Accuracy(Test)     |    82.05%   |     83.85%  |  87.75% 
+Precision     |     75.64%   |     78.53%   |   88.19%
+Recall    |    90.50%     |     96.74%  |   90.60%
+F1-score    |    82.41%     |   86.69%  |  89.38%
+Parameters|{kernel='rbf',gamma='auto', random_state=0}|{solver='liblinear',random_state=0}|{'max_features': 'sqrt', 'n_estimators': 200}
