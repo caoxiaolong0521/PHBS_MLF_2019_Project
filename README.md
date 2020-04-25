@@ -92,7 +92,7 @@ Feature name | Explanations about the feature
 
 ## Appendix
 ### A.1 Comparison Among Models
- Index   |  Logistic Regression |  Support Vector Machine | Random Forest
+&nbsp;   |  Logistic Regression |  Support Vector Machine | Random Forest
 :-: | :------: | :------: | :------: 
 **Accuracy(Train)**     |     80.96%    |     85.68%   | 89.12%
 **Accuracy(Test)**     |    82.05%   |     83.85%  |  87.75% 
