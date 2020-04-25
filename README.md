@@ -84,7 +84,7 @@ Feature name | Explanations about the feature
 <div align=center> <img src="images/learning_curve.jpg" height=500, align='middle' style='margin: 0 auto'/>
 </div>
 
-* As for other indicators, the **cross-validation score** is *87.30%* and **F1-score** is *89.53%*, the results are shown in [Part-2 Train_model.ipynb](Part-2/Part-2%20Train_model.ipynb).
+* As for other indicators, the **cross-validation score** is *87.75%* and **F1-score** is *89.38%*, the results are shown in [Part-2 Train_model.ipynb](Part-2/Part-2%20Train_model.ipynb).
 
 ## 5. Model Application (Unfinished)
 * After the process above, we defined the function `classify_url` based on the trained model to classify a new website's URL. But before the prediction, we need to check whether the input URL is in a valid format using the function `check_valid_url`.
