@@ -99,10 +99,4 @@ Accuracy(Test)     |     1     |     1   |  1
 Precision     |     1     |     1    |   1
 Recall    |     1     |     1   |   1
 F1-score    |     1     |     1  |   1
-Parameters    |     {C=1.0, class_weight=None, dual=False, fit_intercept=True,
-          intercept_scaling=1, max_iter=100, multi_class='warn',
-          n_jobs=None, penalty='l2', random_state=0, solver='liblinear',
-          tol=0.0001, verbose=0, warm_start=False}     |     {C=1.0, cache_size=200, class_weight=None, coef0=0.0,
-  decision_function_shape='ovr', degree=3, gamma='auto', kernel='rbf',
-  max_iter=-1, probability=False, random_state=0, shrinking=True,
-  tol=0.001, verbose=False}   |   {'max_features': 'sqrt', 'n_estimators': 200}
+Parameters|{kernel='rbf',gamma='auto', random_state=0}|{solver='liblinear',random_state=0}|{'max_features': 'sqrt', 'n_estimators': 200}
