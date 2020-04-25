@@ -62,7 +62,7 @@ Feature name | Explanations about the feature
 
 * After we obtain the training data (`data_urls.csv`), we need to train the model next.
 * We tried several models and the comparison among different models is shown in the table below. (The largest value of each index is in **bold**.)
-* Comparison among models
+* Comparison among models <br>
     |  Logistic Regression |  Support Vector Machine | Random Forest
 :-: | :------: | :------: | :------: | :------: |
 Accuray(Train)     |     80.96%    |     85.68%   | 89.12%
