@@ -100,3 +100,12 @@ Parameters|{kernel='rbf',gamma='auto', random_state=0}|{solver='liblinear',rando
 * After the process above, we defined the function `classify_url` based on the trained model to classify a new website's URL. But before the prediction, we need to check whether the input URL is in a valid format using the function `check_valid_url`.
 * The source code is in the last part of [Part-2 Train_model.ipynb](Part-2/Part-2%20Train_model.ipynb).
 
+## 6. Comparison
+    |  Logistic Regression |  Support Vector Machine | Random Forest
+:-: | :------: | :------: | :------: 
+Accuray(Train)     |     80.96%    |     85.68%   | 89.12%
+Accuracy(Test)     |    82.05%   |     83.85%  |  87.75% 
+Precision     |     75.64%   |     78.53%   |   88.19%
+Recall    |    90.50%     |     96.74%  |   90.60%
+F1-score    |    82.41%     |   86.69%  |  89.38%
+Parameters|{kernel='rbf',gamma='auto', random_state=0}|{solver='liblinear',random_state=0}|{'max_features': 'sqrt', 'n_estimators': 200}
