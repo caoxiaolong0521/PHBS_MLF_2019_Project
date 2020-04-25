@@ -61,6 +61,7 @@ Feature name | Explanations about the feature
 ### 4.1 Train Model
 
 * After we obtain the training data (`data_urls.csv`), we need to train the model next.
+* We tried several models and the comparison among different models is shown in the table below. (The largest value of each index is in **bold**.)
 * The model we chose is the **Random Forest** (we also tried other models like SVM and logistic regression, but the result is not so good). 
 * The source code of training the model is in [Part-2 Train_model.ipynb](Part-2/Part-2%20Train_model.ipynb).
 
