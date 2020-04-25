@@ -101,7 +101,7 @@ Parameters|{kernel='rbf',gamma='auto', random_state=0}|{solver='liblinear',rando
 * The source code is in the last part of [Part-2 Train_model.ipynb](Part-2/Part-2%20Train_model.ipynb).
 
 ## 6. Comparison
-    |  Logistic Regression |  Support Vector Machine | Random Forest
+ /   |  Logistic Regression |  Support Vector Machine | Random Forest
 :-: | :------: | :------: | :------: 
 Accuray(Train)     |     80.96%    |     85.68%   | 89.12%
 Accuracy(Test)     |    82.05%   |     83.85%  |  87.75% 
