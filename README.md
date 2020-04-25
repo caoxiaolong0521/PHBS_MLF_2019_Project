@@ -94,9 +94,9 @@ Feature name | Explanations about the feature
 ## 6.Comparison Among Models<br>
   /  |  LR |  SVM | RF
 | ------ | ------ | ------ | ------ |
-Accuray(Train)     |     1    |     1   |  1
-Accuracy(Test)     |     1     |     1   |  1 
-Precision     |     1     |     1    |   1
-Recall    |     1     |     1   |   1
-F1-score    |     1     |     1  |   1
+Accuray(Train)     |     80.96%    |     85.68%   | 89.12%
+Accuracy(Test)     |    82.05%   |     83.85%  |  87.75% 
+Precision     |     75.64%   |     78.53%   |   88.19%
+Recall    |    90.50%     |     96.74%  |   90.60%
+F1-score    |    82.41%     |   86.69%  |  89.38%
 Parameters|{kernel='rbf',gamma='auto', random_state=0}|{solver='liblinear',random_state=0}|{'max_features': 'sqrt', 'n_estimators': 200}
