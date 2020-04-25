@@ -64,7 +64,7 @@ Feature name | Explanations about the feature
 * We tried several models and the comparison among different models is shown in the table below. (The largest value of each index is in **bold**.)
 * Comparison among models </br>
   \  |  Logistic Regression |  Support Vector Machine | Random Forest
-:-: | :------: | :------: | :------: | :------: |
+:-: | :------: | :------: | :------: | :------: 
 Accuray(Train)     |     80.96%    |     85.68%   | 89.12%
 Accuracy(Test)     |    82.05%   |     83.85%  |  87.75% 
 Precision     |     75.64%   |     78.53%   |   88.19%
