@@ -99,6 +99,6 @@ Feature name | Explanations about the feature
 *Precision*     |     75.64%   |     78.53%   |   **88.19%**
 *Recall*    |    90.50%     |     **96.74%**  |   90.60%
 *F1-score*    |    82.41%     |   86.69%  |   **89.38%**
-*Parameters* |{kernel='rbf',gamma='auto', random_state=0}|{solver='liblinear',random_state=0}|{'max_features': 'sqrt', 'n_estimators': 200}
+*Parameters* | `{kernel='rbf',gamma='auto', random_state=0}` | `{solver='liblinear',random_state=0}` | `{'max_features': 'sqrt', 'n_estimators': 200}`
 
 * Except for the value of **recall**, all the other indices of the random forest are the largest. And the random forest model's recall value is greater than 90%, which we think is also relatively high, so we chose random forest model finally.
