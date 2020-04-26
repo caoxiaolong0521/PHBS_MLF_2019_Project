@@ -117,13 +117,15 @@ Feature name | Explanations about the feature
 ### A.2 Explanations about Professor's Comments/Questions
 
 **Question #1**:  *Based on your Learning curve, the test accuracy is always 100%, I am wondering if you are making any mistakes.* </br>
+
 **Answer**: 
 * In previous version, we defined our own function to plot the learning curve, but we found the **train accuracy** was always very close to 100% (*the test accuracy is about 85%*) because of some round-off errors, so we gave up this idea and decided to use the predefined method `sklearn.model_selection.learning_curve`.
 * In current version, for the new learning curve, the **train accuracy**(black line) is not always 100% (if we magnify the picture we can see *the value is approximately 98% - 99%*). Maybe there is some over-fitting in our model, but as the test accuracy (red line) is higher that 85%, we think the degree of over-fitting is acceptable.
 
 
 
-**Question #2**: *Why did you pick Random Forest? Did you compare with other methods?*
+**Question #2**: *Why did you pick Random Forest? Did you compare with other methods?* </br>
+
 **Answer**: 
 * We used Logistic Regression, SVM and Random Forest respectively for our sample data. After comparing all the model evaluation measures, which have been listed in Appendix A.1, we chose Random Forest in the end.
 
