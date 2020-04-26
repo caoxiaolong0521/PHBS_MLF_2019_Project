@@ -1,4 +1,4 @@
-# Detection of the Malicious Websites' URL
+# Detection of Malicious Website's URL
 ## 0. Group-#11 Members
 
 
@@ -80,7 +80,8 @@ Feature name | Explanations about the feature
 <div align=center><img src="images/Importance_of_features.jpg" height=500, align='middle' style='margin: 0 auto'/>
 </div>
 
-In addition, based on the features' importance above, *we test model's accuracy* **with different numbers of most useful features** (i.e. *use the most important k features instead of all* to see whether there is the chance to reduce dimensionality). As we can see in the figure below, the accuracy score is the highest when we use the first 6 features. However, we still use all of the 8 features in the final part, because the models with 6 and 8 features have similar accuracies.
+* In addition, based on the features' importance above, *we test model's accuracy* **with different numbers of most useful features** (i.e. *use the most important k features instead of all* to see whether there is the chance to reduce dimensionality). 
+* As we can see in the figure below, the accuracy score is the highest when we use the first 6 features. However, we still use all of the 8 features in the final part, because the models with 6 and 8 features have similar accuracies.
 
 <div align=center><img src="images/plot_of_accuracy with different features.jpg" height=500, align='middle' style='margin: 0 auto'/>
 </div>
