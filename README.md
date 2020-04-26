@@ -84,6 +84,7 @@ Feature name | Explanations about the feature
 * As we can see in the figure below, the accuracy score is the highest when we use all the features. But when we use the 5 most important features, its accuracy is close to using all the features. So it shows that if you want to reduce dimensionality, you can choose the 5 most important features (`popularity`, `num_digits`, `Entropy`, `url_length`, `bag_of_words`) and the accuracy will not drop much.
 <div align=center><img src="images/plot_of_accuracy with different features.jpg" height=500, align='middle' style='margin: 0 auto'/>
 </div>
+
 * In the final part, we still use all the features because it is the most accurate and the speed of calculation does vary much when using fewer features.
 
 4. **Learning Curve**:  From the **learning curve**, we can see that our model is **not biased** and **variation** is **not** very **high**.
@@ -115,7 +116,8 @@ Feature name | Explanations about the feature
 
 ### A.2 Explanations about Professor's Comments/Questions
 
-* **Based on your Learning curve, the test accuracy is always 100%, I am wondering if you are making any mistakes. **
+* **Based on your Learning curve, the test accuracy is always 100%, I am wondering if you are making any mistakes.** </br>
+
 **Answer**: 
 * In previous version, we defined our own function to plot the learning curve, but we found the **train accuracy** was always very close to 100% (*the test accuracy is about 85%*) because of some round-off errors, so we gave up this idea and decided to use the predefined method `sklearn.model_selection.learning_curve`.
 * In current version, for the new learning curve, the **train accuracy**(black line) is not always 100% (if we magnify the picture we can see *the value is approximately 98% - 99%*). Maybe there is some over-fitting in our model, but as the test accuracy (red line) is higher that 85%, we think the degree of over-fitting is acceptable.
