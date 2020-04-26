@@ -80,7 +80,7 @@ Feature name | Explanations about the feature
 <div align=center><img src="images/Importance_of_features.jpg" height=500, align='middle' style='margin: 0 auto'/>
 </div>
 
-In addition, based on the features' importance above, we test model's accuracy with different numbers of most useful features. As we can see in the figure below, the accuracy score is the highest when we use the first 6 features. However, we still use all of the 8 features in the final part, because the models with 6 and 8 features have similar accuracies. Hence, we did not eliminate the rest 2 features, namely SpecialChars and ContainsIP.
+In addition, based on the features' importance above, *we test model's accuracy* **with different numbers of most useful features** (i.e. *use the most important k features instead of all* to see whether there is the chance to reduce dimensionality). As we can see in the figure below, the accuracy score is the highest when we use the first 6 features. However, we still use all of the 8 features in the final part, because the models with 6 and 8 features have similar accuracies.
 
 <div align=center><img src="images/plot_of_accuracy with different features.jpg" height=500, align='middle' style='margin: 0 auto'/>
 </div>
@@ -113,20 +113,20 @@ In addition, based on the features' importance above, we test model's accuracy w
 
   
 
-### A.2 Answers to Professor's Questions
+### A.2 Explanations about Professor's Comments/Questions
 
-**Q1**. Based on your Learning curve, the test accuracy is always 100%, I am wondering if you are making any mistakes. 
+**Q1**: Based on your Learning curve, the test accuracy is always 100%, I am wondering if you are making any mistakes. 
 
-**A1**. For our learning curve, the test accuracy is indeed always 100%. Maybe there is some over-fitting in our model, but as the test accuracy is higher that 82%, we think the degree of over-fitting is acceptable.
-
-
-
-**Q2**. Why did you pick Random Forest? Did you compare with other methods?
-
-**A2**. We used Logistic Regression, SVM and Random Forest respectively for our sample data. After comparing all the model evaluation measures, which have been listed in Appendix A.1, we choose Random Forest in the end.
+**A1**: For our learning curve, the **train accuracy**(black line) is indeed always 100% (*the test accuracy converges to approximately 80%*). Maybe there is some over-fitting in our model, but as the test accuracy(red line) is higher that 80%, we think the degree of over-fitting is acceptable.
 
 
 
-**Q3**. The PCA part is not relevant. After doing PCA, you're not using those 6 factors. Instead, you can show  the feature important using RF to see which factors are important.
+**Q2**: Why did you pick Random Forest? Did you compare with other methods?
 
-**A3**. Based on Professor's suggestions, we use Random Forest's feature importance to take a look at the usefulness of every feature, which is listed **in Part 4.2**. Although the first 6 features contain more predictive ability, we still use all of the 8 features in the final part, because the models with 6 and 8 features have similar accuracies, which is also in the **part of 3 in Part 4.2**. Hence, we did not eliminate the rest 2 features, SpecialChars and containIP.
+**A2**: We used Logistic Regression, SVM and Random Forest respectively for our sample data. After comparing all the model evaluation measures, which have been listed in Appendix A.1, we chose Random Forest in the end.
+
+
+
+**Q3**. The PCA part is not relevant. After doing PCA, you're not using those 6 factors. Instead, you can show the feature important using RF to see which factors are important.
+
+**A3**. Based on professor's suggestions, we use the predefined attribute of the Random Forest model (`.feature_importances_`) to show the features important instead of the irrelevant PCA method. And the result is added **in Part 4.2**, which shows the importance of different features. Although using the first 6 features will predict slightly more accurate, we still use all of the 8 features in the final part, because the models have similar accuracies when using more than 5 features (the result is shown in the **part of 3 in Part 4.2**). Hence, we did not eliminate the rest 2 features, `special_chars` and `contain_IP`.
