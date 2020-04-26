@@ -92,8 +92,10 @@ In addition, based on the features' importance above, we test model's accuracy w
 
 * As for other indicators, the **cross-validation score** is *87.75%* and **F1-score** is *89.38%*, the results are shown in [Part-2 Train_model.ipynb](Part-2/Part-2%20Train_model.ipynb).
 
-## 5. Model Application (Unfinished)
-* After the process above, we defined the function `classify_url` based on the trained model to classify a new website's URL. But before the prediction, we need to check whether the input URL is in a valid format using the function `check_valid_url`.
+## 5. Model Application
+* In this *extension part*, the main purpose of our group is to **encapsulate the trained model into some functions** for the users to call when they want to detect whether a new website's URL is malicious.
+* We defined the function `classify_url` based on the trained model to classify a new website's URL. But before the prediction, we need to check whether the input URL is in a valid format using the function `check_valid_url`, and we need to extract the URL's features using the function `get_url_info`.
+* **Combining the above 3 functions**, we define the function `apply_classify_url` which is designed for users to call when detecting malicious websites (*we show some samples of calling this function in the last part of the code*).
 * The source code is in the last part of [Part-2 Train_model.ipynb](Part-2/Part-2%20Train_model.ipynb).
 
 ## Appendix
