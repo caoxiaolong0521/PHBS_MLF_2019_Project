@@ -76,12 +76,13 @@ Feature name | Explanations about the feature
 <div align=center><img src="images/confusion_matrix.jpg" height=500/>
 </div>
 
-3. **Feature Importance**:  From the picture below, we can see the importance of each features and the **first 6 features** are significantly useful.
+3. **Feature Importance**:  From the picture below, we can see the importance of each features.
 <div align=center><img src="images/Importance_of_features.jpg" height=500, align='middle' style='margin: 0 auto'/>
 </div>
 
 * In addition, based on the features' importance above, *we test model's accuracy* **with different numbers of most useful features** (i.e. *use the most important k features instead of all* to see whether there is the chance to reduce dimensionality). 
-* As we can see in the figure below, the accuracy score is the highest when we use the first 6 features. However, we still use all of the 8 features in the final part, because the models with 6 and 8 features have similar accuracies.
+* As we can see in the figure below, the accuracy score is the highest when we use all the features. But when we use the 5 most important features, its accuracy is close to using all the features. So it shows that if you want to reduce dimensionality, you can choose the 5 most important features (`popularity`, `num_digits`, `Entropy`, `url_length`, `bag_of_words`) and the accuracy will not drop much.
+* In the final part, we still use all the features because it is the most accurate and the speed of calculation does vary much when using fewer features.
 
 <div align=center><img src="images/plot_of_accuracy with different features.jpg" height=500, align='middle' style='margin: 0 auto'/>
 </div>
@@ -116,23 +117,21 @@ Feature name | Explanations about the feature
 
 ### A.2 Explanations about Professor's Comments/Questions
 
-**Q1**: Based on your Learning curve, the test accuracy is always 100%, I am wondering if you are making any mistakes. 
-
-**A1**: 
+**Question #1**: Based on your Learning curve, the test accuracy is always 100%, I am wondering if you are making any mistakes. 
+**Answer**: 
 * In previous version, we defined our own function to plot the learning curve, but we found the **train accuracy** was always very close to 100% (*the test accuracy is about 85%*) because of some round-off errors, so we gave up this idea and decided to use the predefined method `sklearn.model_selection.learning_curve`.
 * In current version, for the new learning curve, the **train accuracy**(black line) is not always 100% (if we magnify the picture we can see *the value is approximately 98% - 99%*). Maybe there is some over-fitting in our model, but as the test accuracy (red line) is higher that 85%, we think the degree of over-fitting is acceptable.
 
 
 
-**Q2**: Why did you pick Random Forest? Did you compare with other methods?
-
-**A2**: We used Logistic Regression, SVM and Random Forest respectively for our sample data. After comparing all the model evaluation measures, which have been listed in Appendix A.1, we chose Random Forest in the end.
-
+**Question #2**: Why did you pick Random Forest? Did you compare with other methods?
+**Answer**: <br>We used Logistic Regression, SVM and Random Forest respectively for our sample data. After comparing all the model evaluation measures, which have been listed in Appendix A.1, we chose Random Forest in the end.
 
 
-**Q3**: The PCA part is not relevant. After doing PCA, you're not using those 6 factors. Instead, you can show the feature important using RF to see which factors are important.
 
-**A3**: 
+**Question #3**: The PCA part is not relevant. After doing PCA, you're not using those 6 factors. Instead, you can show the feature important using RF to see which factors are important.
+
+**Answer**: 
 * Based on professor's suggestions, we use the predefined attribute of the Random Forest model (`.feature_importances_`) to show the features important instead of the irrelevant PCA method. And the result is added **in Part 4.2**, which shows the importance of different features. 
 * We can see that when we use 5 most important features, the accuracy was higher than 89% (the result is shown in the **part of 3 in Part 4.2**). And as we add more features, the accuracy will become higher. The accuracy is the highest when we use all the features.
 * In the final part of application, we use all of the 8 features because it is the most accurate. But if you want to get rid of some unnecessary features to reduce dimensionality and accelerate the speed of calculation, you can choose the 5 most important features (`popularity`, `num_digits`, `Entropy`, `url_length`, `bag_of_words`) and the accuracy will not drop much.
