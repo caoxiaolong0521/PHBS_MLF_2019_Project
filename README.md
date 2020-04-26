@@ -120,7 +120,7 @@ Feature name | Explanations about the feature
 
 **Answer**: 
 * In previous version, we defined our own function to plot the learning curve, but we found the **train accuracy** was always very close to 100% (*the test accuracy is about 85%*) because of some round-off errors, so we gave up this idea and decided to use the predefined method `sklearn.model_selection.learning_curve`.
-* In current version, for the new learning curve, the **train accuracy**(black line) is not always 100% (if we magnify the picture we can see *the value is approximately 98% - 99%*). Maybe there is some over-fitting in our model, but as the test accuracy (red line) is higher that 85%, we think the degree of over-fitting is acceptable.
+* In current version, for the new learning curve, the **train accuracy** (black line) is not always 100% (if we magnify the picture we can see *the value is approximately 98% - 99%*). Maybe there is some over-fitting in our model, but as the test accuracy (red line) is higher that 85%, we think the degree of over-fitting is acceptable.
 
 
 
@@ -136,4 +136,4 @@ Feature name | Explanations about the feature
 **Answer**: 
 * Based on professor's suggestions, we use the predefined attribute of the Random Forest model (`.feature_importances_`) to show the features important instead of the irrelevant PCA method. And the result is added **in Part 4.2**, which shows the importance of different features. 
 * We can see that when we use 5 most important features, the accuracy was higher than 89% (the result is shown in the **part of 3 in Part 4.2**). And as we add more features, the accuracy will become higher. The accuracy is the highest when we use all the features.
-* In the final part of application, we use all of the 8 features because it is the most accurate. But if you want to get rid of some unnecessary features to reduce dimensionality and accelerate the speed of calculation, you can choose the 5 most important features (`popularity`, `num_digits`, `Entropy`, `url_length`, `bag_of_words`) and the accuracy will not drop much.
+* In the final part of application, we use all of the 8 features because it is the most accurate. But if you want to get rid of some features to reduce dimensionality and accelerate the speed of calculation, you can choose the 5 most important features (`popularity`, `num_digits`, `Entropy`, `url_length`, `bag_of_words`) and the accuracy will not drop much.
