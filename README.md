@@ -116,7 +116,7 @@ Feature name | Explanations about the feature
 
 ### A.2 Explanations about Professor's Comments/Questions
 
-* **Based on your Learning curve, the test accuracy is always 100%, I am wondering if you are making any mistakes.** </br>
+**Question #1**: *Based on your Learning curve, the test accuracy is always 100%, I am wondering if you are making any mistakes.* </br>
 
 **Answer**: 
 * In previous version, we defined our own function to plot the learning curve, but we found the **train accuracy** was always very close to 100% (*the test accuracy is about 85%*) because of some round-off errors, so we gave up this idea and decided to use the predefined method `sklearn.model_selection.learning_curve`.
