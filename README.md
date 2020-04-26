@@ -111,7 +111,7 @@ Feature name | Explanations about the feature
 *Parameters* | `{kernel='rbf',gamma='auto', random_state=0}` | `{solver='liblinear',random_state=0}` | `{'max_features': 'sqrt', 'n_estimators': 200}`
 
 * Except for the value of **recall**, all the other indices of the random forest are the largest. And the random forest model's recall value is greater than 90%, which we think is also relatively high, so we chose random forest model finally.
-
+* **The result is consistent with our common sense** that the performance of RF is supposed to be the best. Our project goal is a binary classification mission, and the two **"random"** parts (i.e. [1]randomly choose bootstrap samples [2]randomly restrict features) in the RF model reduce the degree of overfitting largely which guarantee its best performance and robustness.
   
 
 ### A.2 Explanations about Professor's Comments/Questions
